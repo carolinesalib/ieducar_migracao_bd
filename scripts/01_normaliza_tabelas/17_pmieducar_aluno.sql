@@ -1,0 +1,17 @@
+ALTER TABLE pmieducar.aluno ADD COLUMN justificativa_falta_documentacao smallint;
+ALTER TABLE pmieducar.aluno ADD COLUMN url_laudo_medico json;
+ALTER TABLE pmieducar.aluno ADD COLUMN codigo_sistema varchar(30);
+ALTER TABLE pmieducar.aluno ADD COLUMN veiculo_transporte_escolar smallint;
+ALTER TABLE pmieducar.aluno ADD COLUMN autorizado_um varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN parentesco_um varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN autorizado_dois varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN parentesco_dois varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN autorizado_tres varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN parentesco_tres varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN autorizado_quatro varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN parentesco_quatro varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN autorizado_cinco varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN parentesco_cinco varchar(150);
+ALTER TABLE pmieducar.aluno ADD COLUMN url_documento json;
+ALTER TABLE pmieducar.aluno ADD COLUMN recebe_escolarizacao_em_outro_espaco smallint default 3 not null;
+ALTER TABLE pmieducar.aluno ADD COLUMN recursos_prova_inep integer [];

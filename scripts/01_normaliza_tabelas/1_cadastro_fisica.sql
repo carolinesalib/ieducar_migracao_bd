@@ -1,0 +1,16 @@
+ALTER TABLE cadastro.fisica ADD COLUMN ocupacao varchar(255);
+ALTER TABLE cadastro.fisica ADD COLUMN empresa varchar(255);
+ALTER TABLE cadastro.fisica ADD COLUMN pessoa_contato varchar(255);
+ALTER TABLE cadastro.fisica ADD COLUMN renda_mensal numeric(10, 2);
+ALTER TABLE cadastro.fisica ADD COLUMN data_admissao date;
+ALTER TABLE cadastro.fisica ADD COLUMN ddd_telefone_empresa numeric(3);
+ALTER TABLE cadastro.fisica ADD COLUMN telefone_empresa numeric(11);
+ALTER TABLE cadastro.fisica ADD COLUMN falecido boolean;
+ALTER TABLE cadastro.fisica ADD COLUMN ativo integer default 1;
+ALTER TABLE cadastro.fisica ADD COLUMN ref_usuario_exc integer;
+ALTER TABLE cadastro.fisica ADD COLUMN data_exclusao timestamp;
+ALTER TABLE cadastro.fisica ADD COLUMN zona_localizacao_censo integer;
+ALTER TABLE cadastro.fisica ADD COLUMN tipo_trabalho integer;
+ALTER TABLE cadastro.fisica ADD COLUMN local_trabalho varchar;
+ALTER TABLE cadastro.fisica ADD COLUMN horario_inicial_trabalho time;
+ALTER TABLE cadastro.fisica ADD COLUMN horario_final_trabalho time;

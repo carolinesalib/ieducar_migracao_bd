@@ -1,0 +1,1 @@
+alter table pmieducar.cliente add observacoes text;

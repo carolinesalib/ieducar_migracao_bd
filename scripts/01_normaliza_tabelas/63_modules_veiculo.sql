@@ -1,0 +1,1 @@
+ALTER TABLE modules.veiculo ALTER COLUMN ref_cod_motorista DROP NOT NULL;
