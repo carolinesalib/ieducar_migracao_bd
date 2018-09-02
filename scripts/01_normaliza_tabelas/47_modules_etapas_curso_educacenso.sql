@@ -2,7 +2,7 @@ create table if not exists modules.etapas_curso_educacenso
 (
   etapa_id integer not null
     constraint etapas_curso_educacenso_etapa_fk
-    references etapas_educacenso,
+    references modules.etapas_educacenso,
   curso_id integer not null
     constraint etapas_curso_educacenso_curso_fk
     references pmieducar.curso,

@@ -5,12 +5,12 @@ alter sequence pmieducar.distribuicao_uniforme_seq
 
 create table pmieducar.distribuicao_uniforme
 (
-  cod_distribuicao_uniforme integer default nextval('distribuicao_uniforme_seq' :: regclass) not null
+  cod_distribuicao_uniforme integer default nextval('pmieducar.distribuicao_uniforme_seq' :: regclass) not null
     constraint distribuicao_uniforme_cod_distribuicao_uniforme_pkey
     primary key,
   ref_cod_aluno             integer                                                          not null
     constraint distribuicao_uniforme_ref_cod_aluno_fkey
-    references aluno
+    references pmieducar.aluno
     on update restrict on delete restrict,
   ano                       integer                                                          not null,
   kit_completo              boolean,
@@ -31,9 +31,8 @@ create table pmieducar.distribuicao_uniforme
   tenis_tm                  varchar(20),
   ref_cod_escola            integer
     constraint fk_distribuicao_uniforme_escola
-    references escola
+    references pmieducar.escola
 );
 
 alter table pmieducar.distribuicao_uniforme
   owner to postgres;
-

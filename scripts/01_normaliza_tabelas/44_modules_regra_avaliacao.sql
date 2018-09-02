@@ -5,12 +5,12 @@ alter sequence modules.regra_avaliacao_recuperacao_id_seq
 
 create table if not exists modules.regra_avaliacao_recuperacao
 (
-  id                   integer default nextval('regra_avaliacao_recuperacao_id_seq' :: regclass) not null
+  id                   integer default nextval('modules.regra_avaliacao_recuperacao_id_seq' :: regclass) not null
     constraint regra_avaliacao_recuperacao_pkey
     primary key,
   regra_avaliacao_id   integer                                                                   not null
     constraint regra_avaliacao_regra_avaliacao_recuperacao_fk
-    references regra_avaliacao (id)
+    references modules.regra_avaliacao (id)
     on update restrict on delete restrict,
   descricao            varchar(25)                                                               not null,
   etapas_recuperadas   varchar(25)                                                               not null,
@@ -39,4 +39,4 @@ ALTER TABLE modules.regra_avaliacao ADD COLUMN regra_diferenciada_id integer;
 
 alter table modules.regra_avaliacao
 	add constraint regra_diferenciada_fk
-		foreign key (regra_diferenciada_id) references regra_avaliacao (id);
+		foreign key (regra_diferenciada_id) references modules.regra_avaliacao (id);

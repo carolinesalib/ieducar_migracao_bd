@@ -2,7 +2,7 @@ create table if not exists modules.media_geral
 (
   nota_aluno_id     integer    not null
     constraint media_geral_nota_aluno_fk
-    references nota_aluno
+    references modules.nota_aluno
     on delete cascade,
   media             numeric(8, 4) default 0,
   media_arredondada varchar(10)   default 0,

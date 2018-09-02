@@ -4,5 +4,4 @@ alter table pmieducar.historico_escolar add posicao integer;
 
 alter table pmieducar.historico_escolar
   add constraint historico_escolar_ref_cod_escola_fkey
-foreign key (ref_cod_escola) references escola;
-
+foreign key (ref_cod_escola) references pmieducar.escola;

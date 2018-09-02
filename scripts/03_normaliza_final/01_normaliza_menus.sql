@@ -58,7 +58,6 @@ INSERT INTO portal.menu_submenu (cod_menu_submenu, ref_cod_menu_menu, cod_sistem
 INSERT INTO portal.menu_submenu (cod_menu_submenu, ref_cod_menu_menu, cod_sistema, nm_submenu, arquivo, title, nivel) VALUES (9998869, 25, 2, 'Customização de labels', 'educar_configuracoes_labels.php', null, 3);
 INSERT INTO portal.menu_submenu (cod_menu_submenu, ref_cod_menu_menu, cod_sistema, nm_submenu, arquivo, title, nivel) VALUES (9998878, 7, 2, 'Unificação de pessoas', 'educar_unifica_pessoa.php', null, 3);
 INSERT INTO portal.menu_submenu (cod_menu_submenu, ref_cod_menu_menu, cod_sistema, nm_submenu, arquivo, title, nivel) VALUES (9998879, 25, 2, 'Relatorio de exemplo', 'module/Reports/RelatorioExemplo', null, 3);
-INSERT INTO portal.menu_submenu (cod_menu_submenu, ref_cod_menu_menu, cod_sistema, nm_submenu, arquivo, title, nivel) VALUES (9998881, 25, 2, 'Relatorio de teste PhpJasper', 'module/Reports/TestePhpJasper', null, 3);
 -- Atualiza antigos
 UPDATE portal.menu_submenu SET ref_cod_menu_menu = 1, cod_sistema = 0, nm_submenu = 'Super usuário', arquivo = '', title = '', nivel = 3 WHERE cod_menu_submenu = 0;
 UPDATE portal.menu_submenu SET ref_cod_menu_menu = 23, cod_sistema = 2, nm_submenu = 'Minha agenda', arquivo = 'agenda.php', title = '', nivel = 2 WHERE cod_menu_submenu = 155;
@@ -246,7 +245,6 @@ INSERT INTO pmicontrolesis.menu (cod_menu, tt_menu, ord_menu) VALUES (9998851, '
 INSERT INTO pmicontrolesis.menu (cod_menu, tt_menu, ord_menu) VALUES (9998854, 'Servidores', 3);
 INSERT INTO pmicontrolesis.menu (cod_menu, tt_menu, ord_menu) VALUES (9998858, 'Backups', 1);
 INSERT INTO pmicontrolesis.menu (cod_menu, tt_menu, ord_menu) VALUES (9998859, 'Componentes da série', 0);
-INSERT INTO pmicontrolesis.menu (cod_menu, tt_menu, ord_menu) VALUES (9998881, 'Relatorio de teste PhpJasper', 0);
 -- Atualiza todos os menus
 UPDATE pmicontrolesis.menu SET ref_cod_menu_submenu = 41, ref_cod_menu_pai = 999929, tt_menu = 'Pessoas jurídicas', ord_menu = 2, caminho = 'empresas_lst.php', alvo = '_self', suprime_menu = 1, ref_cod_tutormenu = 20, ref_cod_ico = null, tipo_menu = null WHERE cod_menu = 41;
 UPDATE pmicontrolesis.menu SET ref_cod_menu_submenu = 43, ref_cod_menu_pai = 999929, tt_menu = 'Pessoas físicas', ord_menu = 1, caminho = 'atendidos_lst.php', alvo = '_self', suprime_menu = 1, ref_cod_tutormenu = 20, ref_cod_ico = null, tipo_menu = null WHERE cod_menu = 43;
@@ -433,4 +431,3 @@ UPDATE pmicontrolesis.menu SET ref_cod_menu_submenu = 9998851, ref_cod_menu_pai 
 UPDATE pmicontrolesis.menu SET ref_cod_menu_submenu = null, ref_cod_menu_pai = 999913, tt_menu = 'Servidores', ord_menu = 3, caminho = null, alvo = '_self', suprime_menu = 1, ref_cod_tutormenu = 19, ref_cod_ico = null, tipo_menu = null WHERE cod_menu = 9998854;
 UPDATE pmicontrolesis.menu SET ref_cod_menu_submenu = 9998858, ref_cod_menu_pai = 999910, tt_menu = 'Backups', ord_menu = 1, caminho = 'educar_backup_lst.php', alvo = '_self', suprime_menu = 4, ref_cod_tutormenu = 18, ref_cod_ico = null, tipo_menu = null WHERE cod_menu = 9998858;
 UPDATE pmicontrolesis.menu SET ref_cod_menu_submenu = 9998859, ref_cod_menu_pai = 21150, tt_menu = 'Componentes da série', ord_menu = 0, caminho = 'educar_componentes_serie_lst.php', alvo = '_self', suprime_menu = 1, ref_cod_tutormenu = 15, ref_cod_ico = null, tipo_menu = null WHERE cod_menu = 9998859;
-UPDATE pmicontrolesis.menu SET ref_cod_menu_submenu = 9998881, ref_cod_menu_pai = 21126, tt_menu = 'Relatorio de teste PhpJasper', ord_menu = 0, caminho = 'module/Reports/TestePhpJasper', alvo = '_self', suprime_menu = 1, ref_cod_tutormenu = 15, ref_cod_ico = null, tipo_menu = null WHERE cod_menu = 9998881;

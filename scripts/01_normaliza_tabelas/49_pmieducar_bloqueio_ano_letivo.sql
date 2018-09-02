@@ -2,7 +2,7 @@ create table if not exists pmieducar.bloqueio_ano_letivo
 (
   ref_cod_instituicao integer not null
     constraint pmieducar_bloqueio_ano_letivo_ref_cod_instituicao
-    references instituicao,
+    references pmieducar.instituicao,
   ref_ano             integer not null,
   data_inicio         date    not null,
   data_fim            date    not null,

@@ -8,7 +8,7 @@ ALTER TABLE pmieducar.matricula ADD COLUMN turno_id integer;
 
 alter table pmieducar.matricula
   add constraint fk_matricula_abandono_tipo
-foreign key (ref_cod_abandono_tipo) references abandono_tipo;
+foreign key (ref_cod_abandono_tipo) references pmieducar.abandono_tipo;
 
 create or replace function pmieducar.updated_at_matricula()
   returns trigger
@@ -23,4 +23,4 @@ $$;
 alter function pmieducar.updated_at_matricula()
   owner to postgres;
 
-CREATE TRIGGER trigger_updated_at_matricula BEFORE UPDATE ON matricula FOR EACH ROW EXECUTE PROCEDURE updated_at_matricula();
+CREATE TRIGGER trigger_updated_at_matricula BEFORE UPDATE ON pmieducar.matricula FOR EACH ROW EXECUTE PROCEDURE pmieducar.updated_at_matricula();

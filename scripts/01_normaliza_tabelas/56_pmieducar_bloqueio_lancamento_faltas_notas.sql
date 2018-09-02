@@ -12,7 +12,7 @@ create table if not exists pmieducar.bloqueio_lancamento_faltas_notas
   ano            integer                                                                            not null,
   ref_cod_escola integer                                                                            not null
     constraint bloqueio_lancamento_faltas_notas_ref_cod_escola_fkey
-    references escola
+    references pmieducar.escola
     on update restrict on delete restrict,
   etapa          integer                                                                            not null,
   data_inicio    date                                                                               not null,

@@ -26,7 +26,7 @@ create view cadastro.v_endereco as
          m.nome AS cidade,
          m.sigla_uf,
          b.zona_localizacao
-  FROM endereco_pessoa e,
+  FROM cadastro.endereco_pessoa e,
        logradouro l,
        bairro b,
        municipio m
@@ -48,7 +48,7 @@ create view cadastro.v_endereco as
          e.cidade,
          e.sigla_uf,
          e.zona_localizacao
-  FROM endereco_externo e
+  FROM cadastro.endereco_externo e
   WHERE (e.tipo = (1) :: numeric);
 
 alter table cadastro.v_endereco

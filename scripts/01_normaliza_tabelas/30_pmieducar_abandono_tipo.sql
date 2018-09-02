@@ -6,7 +6,7 @@ alter sequence pmieducar.abandono_tipo_cod_abandono_tipo_seq
 
 create table pmieducar.abandono_tipo
 (
-  cod_abandono_tipo   integer default nextval('abandono_tipo_cod_abandono_tipo_seq' :: regclass) not null
+  cod_abandono_tipo   integer default nextval('pmieducar.abandono_tipo_cod_abandono_tipo_seq' :: regclass) not null
     constraint pk_cod_abandono_tipo
     primary key,
   ref_cod_instituicao integer                                                                    not null

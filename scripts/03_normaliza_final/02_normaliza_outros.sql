@@ -1,5 +1,6 @@
 -- SearchPath
-ALTER DATABASE ieducar SET search_path = "$user", public, portal, cadastro, acesso, alimentos, consistenciacao, historico, pmiacoes, pmicontrolesis, pmidrh, pmieducar, pmiotopic, urbano, modules;
+-- IMPORTANTE: não esquecer de renomear o nome do banco de dados
+ALTER DATABASE nome_do_banco_de_dados SET search_path = "$user", public, portal, cadastro, acesso, alimentos, consistenciacao, historico, pmiacoes, pmicontrolesis, pmidrh, pmieducar, pmiotopic, urbano, modules;
 
 -- Remove indice não utilizado
 drop index if exists pmieducar.i_habilitacaoo_nm_tipo_asc;
@@ -25,8 +26,8 @@ create view portal.v_funcionario as
          f.proibido,
          f.ref_cod_setor_new,
          f.email,
-         (SELECT pessoa.nome FROM pessoa WHERE (pessoa.idpes = (f.ref_cod_pessoa_fj) :: numeric)) AS nome
-  FROM funcionario f;
+         (SELECT pessoa.nome FROM cadastro.pessoa WHERE (pessoa.idpes = (f.ref_cod_pessoa_fj) :: numeric)) AS nome
+  FROM portal.funcionario f;
 
 alter table portal.v_funcionario
   owner to postgres;
@@ -58,3 +59,6 @@ ALTER AGGREGATE public.textcat_all(text) OWNER TO postgres;
 
 -- Adiciona extensão unaccent
 CREATE EXTENSION IF NOT EXISTS unaccent WITH SCHEMA public;
+
+-- Insere configurações gerais
+INSERT INTO pmieducar.configuracoes_gerais (ref_cod_instituicao, permite_relacionamento_posvendas) VALUES (1, 1);

@@ -5,7 +5,7 @@ alter sequence pmieducar.projeto_seq
 
 create table pmieducar.projeto
 (
-  cod_projeto integer default nextval('projeto_seq' :: regclass) not null
+  cod_projeto integer default nextval('pmieducar.projeto_seq' :: regclass) not null
     constraint pmieducar_projeto_cod_projeto
     primary key,
   nome        varchar(50),
@@ -19,10 +19,10 @@ create table pmieducar.projeto_aluno
 (
   ref_cod_projeto   integer not null
     constraint pmieducar_projeto_aluno_ref_cod_projeto
-    references projeto,
+    references pmieducar.projeto,
   ref_cod_aluno     integer not null
     constraint pmieducar_projeto_aluno_ref_cod_aluno
-    references aluno,
+    references pmieducar.aluno,
   data_inclusao     date,
   data_desligamento date,
   turno             integer,
