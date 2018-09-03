@@ -11,3 +11,9 @@ alter table bairro
 alter table bairro
 	add constraint bairro_idsetorbai_fk
 		foreign key (idsetorbai) references setor_bai;
+
+-- Relaciona com distrito
+update public.bairro
+set iddis = (select iddis
+             from public.distrito
+             where distrito.idmun = bairro.idmun);
