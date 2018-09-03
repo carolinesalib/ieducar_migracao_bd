@@ -17,3 +17,6 @@ update public.bairro
 set iddis = (select iddis
              from public.distrito
              where distrito.idmun = bairro.idmun);
+
+-- Adiciona not null na coluna iddis
+alter table public.bairro alter column iddis set not null;
