@@ -1,7 +1,7 @@
 create sequence pmieducar.projeto_seq;
 
 alter sequence pmieducar.projeto_seq
-  owner to postgres;
+  owner to ieducar;
 
 create table pmieducar.projeto
 (
@@ -13,7 +13,7 @@ create table pmieducar.projeto
 );
 
 alter table pmieducar.projeto
-  owner to postgres;
+  owner to ieducar;
 
 create table pmieducar.projeto_aluno
 (
@@ -31,4 +31,4 @@ create table pmieducar.projeto_aluno
 );
 
 alter table pmieducar.projeto_aluno
-  owner to postgres;
+  owner to ieducar;

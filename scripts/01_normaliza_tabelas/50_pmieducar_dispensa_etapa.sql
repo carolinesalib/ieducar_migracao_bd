@@ -7,4 +7,4 @@ create table if not exists pmieducar.dispensa_etapa
 );
 
 alter table pmieducar.dispensa_etapa
-  owner to postgres;
+  owner to ieducar;

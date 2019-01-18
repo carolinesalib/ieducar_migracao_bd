@@ -52,7 +52,7 @@ create view cadastro.v_endereco as
   WHERE (e.tipo = (1) :: numeric);
 
 alter table cadastro.v_endereco
-  owner to postgres;
+  owner to ieducar;
 
 -- Atualiza todos os municípios
 UPDATE public.municipio SET nome = 'Condado', sigla_uf = 'PE', area_km2 = null, idmreg = null, idasmun = null, cod_ibge = 2604601, geom = null, tipo = 'M', idmun_pai = null, idpes_rev = null, idpes_cad = 1, data_rev = null, data_cad = '2010-01-06 18:30:35.365661', origem_gravacao = 'M', operacao = 'I', idsis_rev = null, idsis_cad = 9 WHERE idmun = 1514;

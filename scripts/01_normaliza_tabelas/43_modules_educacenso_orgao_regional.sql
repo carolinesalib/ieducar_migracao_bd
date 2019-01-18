@@ -7,4 +7,4 @@ create table if not exists modules.educacenso_orgao_regional
 );
 
 alter table modules.educacenso_orgao_regional
-  owner to postgres;
+  owner to ieducar;

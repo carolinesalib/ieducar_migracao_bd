@@ -11,4 +11,4 @@ create table pmieducar.aluno_aluno_beneficio
 );
 
 alter table pmieducar.aluno_aluno_beneficio
-  owner to postgres;
+  owner to ieducar;

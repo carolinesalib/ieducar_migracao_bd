@@ -11,4 +11,4 @@ create table if not exists modules.etapas_curso_educacenso
 );
 
 alter table modules.etapas_curso_educacenso
-  owner to postgres;
+  owner to ieducar;

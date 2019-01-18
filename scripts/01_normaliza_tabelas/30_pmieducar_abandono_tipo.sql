@@ -2,7 +2,7 @@ create sequence pmieducar.abandono_tipo_cod_abandono_tipo_seq
   minvalue 0;
 
 alter sequence pmieducar.abandono_tipo_cod_abandono_tipo_seq
-  owner to postgres;
+  owner to ieducar;
 
 create table pmieducar.abandono_tipo
 (
@@ -25,4 +25,4 @@ create table pmieducar.abandono_tipo
 );
 
 alter table pmieducar.abandono_tipo
-  owner to postgres;
+  owner to ieducar;

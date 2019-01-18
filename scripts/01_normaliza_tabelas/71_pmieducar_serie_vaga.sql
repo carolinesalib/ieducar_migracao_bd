@@ -26,4 +26,4 @@ create table pmieducar.serie_vaga
 		unique (ano, ref_cod_instituicao, ref_cod_escola, ref_cod_curso, ref_cod_serie, turno)
 );
 
-alter table pmieducar.serie_vaga owner to postgres;
+alter table pmieducar.serie_vaga owner to ieducar;

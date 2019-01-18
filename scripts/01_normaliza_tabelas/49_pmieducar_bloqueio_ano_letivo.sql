@@ -11,4 +11,4 @@ create table if not exists pmieducar.bloqueio_ano_letivo
 );
 
 alter table pmieducar.bloqueio_ano_letivo
-  owner to postgres;
+  owner to ieducar;

@@ -7,7 +7,7 @@ create table if not exists modules.etapas_educacenso
 );
 
 alter table modules.etapas_educacenso
-  owner to postgres;
+  owner to ieducar;
 
 INSERT INTO modules.etapas_educacenso (id, nome) VALUES (1, 'Educação Infantil - Creche (0 a 3 anos)');
 INSERT INTO modules.etapas_educacenso (id, nome) VALUES (2, 'Educação Infantil - Pré-escola (4 a 5 anos)');

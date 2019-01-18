@@ -1,6 +1,6 @@
 create schema serieciasc;
 
-alter schema serieciasc owner to postgres;
+alter schema serieciasc owner to ieducar;
 
 create table serieciasc.aluno_cod_aluno
 (
@@ -16,7 +16,7 @@ create table serieciasc.aluno_cod_aluno
 		primary key (cod_aluno, cod_ciasc)
 );
 
-alter table serieciasc.aluno_cod_aluno owner to postgres;
+alter table serieciasc.aluno_cod_aluno owner to ieducar;
 
 create table serieciasc.aluno_uniforme
 (
@@ -43,7 +43,7 @@ create table serieciasc.aluno_uniforme
 		primary key (ref_cod_aluno, data_recebimento)
 );
 
-alter table serieciasc.aluno_uniforme owner to postgres;
+alter table serieciasc.aluno_uniforme owner to ieducar;
 
 create table serieciasc.escola_agua
 (
@@ -62,7 +62,7 @@ create table serieciasc.escola_agua
 	updated_at timestamp
 );
 
-alter table serieciasc.escola_agua owner to postgres;
+alter table serieciasc.escola_agua owner to ieducar;
 
 create table serieciasc.escola_energia
 (
@@ -81,7 +81,7 @@ create table serieciasc.escola_energia
 	updated_at timestamp
 );
 
-alter table serieciasc.escola_energia owner to postgres;
+alter table serieciasc.escola_energia owner to ieducar;
 
 create table serieciasc.escola_lingua_indigena
 (
@@ -100,7 +100,7 @@ create table serieciasc.escola_lingua_indigena
 	updated_at timestamp
 );
 
-alter table serieciasc.escola_lingua_indigena owner to postgres;
+alter table serieciasc.escola_lingua_indigena owner to ieducar;
 
 create table serieciasc.escola_lixo
 (
@@ -120,7 +120,7 @@ create table serieciasc.escola_lixo
 	updated_at timestamp
 );
 
-alter table serieciasc.escola_lixo owner to postgres;
+alter table serieciasc.escola_lixo owner to ieducar;
 
 create table serieciasc.escola_projeto
 (
@@ -143,7 +143,7 @@ create table serieciasc.escola_projeto
 	updated_at timestamp
 );
 
-alter table serieciasc.escola_projeto owner to postgres;
+alter table serieciasc.escola_projeto owner to ieducar;
 
 create table serieciasc.escola_regulamentacao
 (
@@ -170,7 +170,7 @@ create table serieciasc.escola_regulamentacao
 	updated_at timestamp
 );
 
-alter table serieciasc.escola_regulamentacao owner to postgres;
+alter table serieciasc.escola_regulamentacao owner to ieducar;
 
 create table serieciasc.escola_sanitario
 (
@@ -187,4 +187,4 @@ create table serieciasc.escola_sanitario
 	updated_at timestamp
 );
 
-alter table serieciasc.escola_sanitario owner to postgres;
+alter table serieciasc.escola_sanitario owner to ieducar;

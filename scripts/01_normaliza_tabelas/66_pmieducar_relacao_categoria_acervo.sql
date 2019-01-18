@@ -9,4 +9,4 @@ create table if not exists pmieducar.relacao_categoria_acervo
 );
 
 alter table pmieducar.relacao_categoria_acervo
-  owner to postgres;
+  owner to ieducar;

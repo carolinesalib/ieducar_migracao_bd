@@ -1,7 +1,7 @@
 create sequence modules.regra_avaliacao_recuperacao_id_seq;
 
 alter sequence modules.regra_avaliacao_recuperacao_id_seq
-  owner to postgres;
+  owner to ieducar;
 
 create table if not exists modules.regra_avaliacao_recuperacao
 (
@@ -20,7 +20,7 @@ create table if not exists modules.regra_avaliacao_recuperacao
 );
 
 alter table modules.regra_avaliacao_recuperacao
-  owner to postgres;
+  owner to ieducar;
 
 ALTER TABLE modules.regra_avaliacao ADD COLUMN tipo_recuperacao_paralela smallint default 0;
 ALTER TABLE modules.regra_avaliacao ADD COLUMN media_recuperacao_paralela numeric(5, 3);

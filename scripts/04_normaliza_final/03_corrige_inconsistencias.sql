@@ -42,7 +42,7 @@ create view relatorio.view_componente_curricular as
    ORDER BY area_conhecimento.ordenamento_ac, area_conhecimento.nome, componente_curricular.ordenamento,
             componente_curricular.nome);
 
-alter table relatorio.view_componente_curricular owner to postgres;
+alter table relatorio.view_componente_curricular owner to ieducar;
 
 alter table pmieducar.servidor_funcao add column matricula varchar;
 create sequence pmieducar.servidor_funcao_seq;

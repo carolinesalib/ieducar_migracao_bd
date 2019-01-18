@@ -1,6 +1,6 @@
 create schema conv_functions;
 
-alter schema conv_functions owner to postgres;
+alter schema conv_functions owner to ieducar;
 
 create function conv_functions.pr_normaliza_enderecos() returns void
 	language plpgsql
@@ -121,5 +121,5 @@ end loop;
 end;
 $$;
 
-alter function conv_functions.pr_normaliza_enderecos() owner to postgres;
+alter function conv_functions.pr_normaliza_enderecos() owner to ieducar;
 

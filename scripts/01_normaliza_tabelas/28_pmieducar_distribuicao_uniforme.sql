@@ -1,7 +1,7 @@
 create sequence pmieducar.distribuicao_uniforme_seq;
 
 alter sequence pmieducar.distribuicao_uniforme_seq
-  owner to postgres;
+  owner to ieducar;
 
 create table pmieducar.distribuicao_uniforme
 (
@@ -35,4 +35,4 @@ create table pmieducar.distribuicao_uniforme
 );
 
 alter table pmieducar.distribuicao_uniforme
-  owner to postgres;
+  owner to ieducar;

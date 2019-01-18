@@ -40,5 +40,5 @@ comment on column pmieducar.configuracoes_gerais.url_cadastro_usuario
 is 'URL da ferramenta externa de cadastro de usuários';
 
 alter table pmieducar.configuracoes_gerais
-  owner to postgres;
+  owner to ieducar;
 

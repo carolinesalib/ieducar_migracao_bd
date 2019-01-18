@@ -1,5 +1,5 @@
 create schema relatorio;
-alter schema relatorio owner to postgres;
+alter schema relatorio owner to ieducar;
 
 create view relatorio.view_componente_curricular as
 (SELECT escola_serie_disciplina.ref_cod_disciplina AS id,
@@ -39,7 +39,7 @@ create view relatorio.view_componente_curricular as
    ORDER BY area_conhecimento.ordenamento_ac, area_conhecimento.nome, componente_curricular.ordenamento,
             componente_curricular.nome);
 
-alter table relatorio.view_componente_curricular owner to postgres;
+alter table relatorio.view_componente_curricular owner to ieducar;
 
 create function relatorio.get_texto_sem_caracter_especial(character varying) returns character varying
 	language sql
@@ -49,7 +49,7 @@ SELECT translate(public.fcn_upper($1),
                        'aaaaaaeeeeiiiiooooouuuucyynAAAAAAEEEEIIIIOOOOOUUUUCYN');
 $$;
 
-alter function relatorio.get_texto_sem_caracter_especial(varchar) owner to postgres;
+alter function relatorio.get_texto_sem_caracter_especial(varchar) owner to ieducar;
 
 create function relatorio.get_texto_sem_espaco(character varying) returns character varying
 	language sql
@@ -57,7 +57,7 @@ as $$
 SELECT translate(public.fcn_upper(regexp_replace($1,' ','','g')), 'åáàãâäéèêëíìîïóòõôöúùüûçÿýñÅÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜÇÝÑ', 'aaaaaaeeeeiiiiooooouuuucyynAAAAAAEEEEIIIIOOOOOUUUUCYN');
 $$;
 
-alter function relatorio.get_texto_sem_espaco(varchar) owner to postgres;
+alter function relatorio.get_texto_sem_espaco(varchar) owner to ieducar;
 
 create function relatorio.count_weekdays(start_date date, end_date date) returns integer
 	language plpgsql
@@ -126,4 +126,4 @@ SELECT COALESCE(
          WHERE escola.cod_escola = $1;
 $$;
 
-alter function relatorio.get_nome_escola(integer) owner to postgres;
+alter function relatorio.get_nome_escola(integer) owner to ieducar;

@@ -7,7 +7,7 @@ create table modules.lingua_indigena_educacenso
 );
 
 alter table modules.lingua_indigena_educacenso
-  owner to postgres;
+  owner to ieducar;
 
 INSERT INTO modules.lingua_indigena_educacenso (id, lingua) VALUES (30, 'Boróro');
 INSERT INTO modules.lingua_indigena_educacenso (id, lingua) VALUES (244, 'Umutína');

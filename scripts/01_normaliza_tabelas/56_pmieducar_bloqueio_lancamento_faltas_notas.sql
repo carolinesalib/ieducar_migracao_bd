@@ -2,7 +2,7 @@ create sequence bloqueio_lancamento_faltas_notas_seq
   minvalue 0;
 
 alter sequence bloqueio_lancamento_faltas_notas_seq
-  owner to postgres;
+  owner to ieducar;
 
 create table if not exists pmieducar.bloqueio_lancamento_faltas_notas
 (
@@ -20,5 +20,5 @@ create table if not exists pmieducar.bloqueio_lancamento_faltas_notas
 );
 
 alter table pmieducar.bloqueio_lancamento_faltas_notas
-  owner to postgres;
+  owner to ieducar;
 

@@ -1,7 +1,7 @@
 create sequence modules.nota_geral_id_seq;
 
 alter sequence modules.nota_geral_id_seq
-  owner to postgres;
+  owner to ieducar;
 
 create table if not exists modules.nota_geral
 (
@@ -18,4 +18,4 @@ create table if not exists modules.nota_geral
 );
 
 alter table modules.nota_geral
-  owner to postgres;
+  owner to ieducar;

@@ -13,7 +13,7 @@ END;
 $$;
 
 alter function public.update_updated_at()
-  owner to postgres;
+  owner to ieducar;
 
 create trigger update_escola_serie_disciplina_updated_at
   before update

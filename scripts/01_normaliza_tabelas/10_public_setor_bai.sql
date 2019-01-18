@@ -6,4 +6,4 @@ create table setor_bai
 	nome varchar(80) not null
 );
 
-alter table setor_bai owner to postgres;
+alter table setor_bai owner to ieducar;

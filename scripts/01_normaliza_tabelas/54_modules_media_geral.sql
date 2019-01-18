@@ -12,5 +12,5 @@ create table if not exists modules.media_geral
 );
 
 alter table modules.media_geral
-  owner to postgres;
+  owner to ieducar;
 

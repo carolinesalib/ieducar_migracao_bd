@@ -16,6 +16,6 @@ END;
 $$;
 
 alter function pmieducar.updated_at_matricula_turma()
-  owner to postgres;
+  owner to ieducar;
 
 CREATE TRIGGER trigger_updated_at_matricula_turma BEFORE UPDATE ON pmieducar.matricula_turma FOR EACH ROW EXECUTE PROCEDURE pmieducar.updated_at_matricula_turma();

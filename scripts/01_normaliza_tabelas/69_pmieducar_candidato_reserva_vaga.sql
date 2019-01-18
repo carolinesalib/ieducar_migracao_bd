@@ -1,7 +1,7 @@
 create sequence pmieducar.candidato_reserva_vaga_seq;
 
 alter sequence pmieducar.candidato_reserva_vaga_seq
-  owner to postgres;
+  owner to ieducar;
 
 create table pmieducar.candidato_reserva_vaga
 (
@@ -38,4 +38,4 @@ create table pmieducar.candidato_reserva_vaga
 );
 
 alter table pmieducar.candidato_reserva_vaga
-  owner to postgres;
+  owner to ieducar;

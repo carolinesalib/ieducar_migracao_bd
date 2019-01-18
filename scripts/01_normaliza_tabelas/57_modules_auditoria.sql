@@ -9,4 +9,4 @@ create table if not exists modules.auditoria
 );
 
 alter table modules.auditoria
-  owner to postgres;
+  owner to ieducar;

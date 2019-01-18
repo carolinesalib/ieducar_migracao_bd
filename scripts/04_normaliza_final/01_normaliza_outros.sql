@@ -30,7 +30,7 @@ create view portal.v_funcionario as
   FROM portal.funcionario f;
 
 alter table portal.v_funcionario
-  owner to postgres;
+  owner to ieducar;
 
 -- Adiciona função textcat_all
 CREATE FUNCTION commacat_ignore_nulls(acc text, instr text) RETURNS text
@@ -47,7 +47,7 @@ CREATE FUNCTION commacat_ignore_nulls(acc text, instr text) RETURNS text
     END;
   $$;
 
-ALTER FUNCTION public.commacat_ignore_nulls(acc text, instr text) OWNER TO postgres;
+ALTER FUNCTION public.commacat_ignore_nulls(acc text, instr text) OWNER TO ieducar;
 
 CREATE AGGREGATE textcat_all(text) (
     SFUNC = commacat_ignore_nulls,
@@ -55,7 +55,7 @@ CREATE AGGREGATE textcat_all(text) (
     INITCOND = ''
 );
 
-ALTER AGGREGATE public.textcat_all(text) OWNER TO postgres;
+ALTER AGGREGATE public.textcat_all(text) OWNER TO ieducar;
 
 -- Adiciona extensão unaccent
 CREATE EXTENSION IF NOT EXISTS unaccent WITH SCHEMA public;

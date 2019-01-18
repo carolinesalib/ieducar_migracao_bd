@@ -8,4 +8,4 @@ create table if not exists pmieducar.categoria_obra
 );
 
 alter table pmieducar.categoria_obra
-  owner to postgres;
+  owner to ieducar;
