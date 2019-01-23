@@ -47,5 +47,3 @@ alter table relatorio.view_componente_curricular owner to ieducar;
 alter table pmieducar.servidor_funcao add column matricula varchar;
 create sequence pmieducar.servidor_funcao_seq;
 alter table pmieducar.servidor_funcao add cod_servidor_funcao integer default nextval('servidor_funcao_seq'::regclass) not null;
-
-
