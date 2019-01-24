@@ -38,6 +38,8 @@ alter table pmieducar.servidor add constraint instituicao_curso_superior_2_fk
 alter table pmieducar.servidor add constraint instituicao_curso_superior_3_fk
   foreign key (instituicao_curso_superior_3) references modules.educacenso_ies;
 
+alter table pmieducar.servidor drop constraint servidor_cod_servidor_fkey;
+
 alter table pmieducar.servidor_alocacao add ano integer;
 alter table pmieducar.servidor_alocacao add ref_cod_servidor_funcao integer;
 alter table pmieducar.servidor_alocacao add ref_cod_funcionario_vinculo integer;
