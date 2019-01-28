@@ -5,7 +5,7 @@ create table pmieducar.auditoria_nota_dispensa
 			primary key,
 	ref_cod_matricula integer not null
 		constraint auditoria_nota_dispensa_ref_cod_matricula_fkey
-			references matricula,
+			references pmieducar.matricula,
 	ref_cod_componente_curricular integer not null
 		constraint auditoria_nota_dispensa_ref_cod_componente_curricular_fkey
 			references modules.componente_curricular (id),
