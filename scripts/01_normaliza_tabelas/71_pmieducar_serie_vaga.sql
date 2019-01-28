@@ -6,19 +6,19 @@ create table pmieducar.serie_vaga
 			primary key,
 	ref_cod_instituicao integer not null
 		constraint serie_vaga_ref_cod_instituicao_fk
-			references instituicao
+			references pmieducar.instituicao
 				on update restrict on delete restrict,
 	ref_cod_escola integer not null
 		constraint serie_vaga_ref_cod_escola_fk
-			references escola
+			references pmieducar.escola
 				on update restrict on delete restrict,
 	ref_cod_curso integer not null
 		constraint serie_vaga_ref_cod_curso_fk
-			references curso
+			references pmieducar.curso
 				on update restrict on delete restrict,
 	ref_cod_serie integer not null
 		constraint serie_vaga_ref_cod_serie_fk
-			references serie
+			references pmieducar.serie
 				on update restrict on delete restrict,
 	vagas smallint not null,
 	turno smallint default 1 not null,
