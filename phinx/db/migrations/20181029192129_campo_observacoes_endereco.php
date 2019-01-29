@@ -11,5 +11,7 @@ class CampoObservacoesEndereco extends AbstractMigration
         $this->table('endereco_pessoa')
             ->addColumn('observacoes', 'text', ['null' => true])
             ->update();
+
+        $this->getAdapter()->setOptions(array_replace($this->getAdapter()->getOptions(), ['schema' => 'public']));
     }
 }

@@ -9,7 +9,7 @@ environments:
     development:
         adapter: pgsql
         host: localhost
-        name: ieducar_test_1
+        name: ieducar_bom_jesus
         user: ieducar
         pass: ieducar
         port: 32769
