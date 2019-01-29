@@ -14,15 +14,15 @@ create view relatorio.view_componente_curricular as
           escola_serie_disciplina.etapas_especificas,
           escola_serie_disciplina.etapas_utilizadas,
           escola_serie_disciplina.carga_horaria
-   FROM (((turma
-       JOIN escola_serie_disciplina ON (((escola_serie_disciplina.ref_ref_cod_serie = turma.ref_ref_cod_serie) AND
+   FROM (((pmieducar.turma
+       JOIN pmieducar.escola_serie_disciplina ON (((escola_serie_disciplina.ref_ref_cod_serie = turma.ref_ref_cod_serie) AND
                                          (escola_serie_disciplina.ref_ref_cod_escola = turma.ref_ref_cod_escola) AND
                                          (escola_serie_disciplina.ativo = 1))))
-       JOIN componente_curricular ON (((componente_curricular.id = escola_serie_disciplina.ref_cod_disciplina) AND
+       JOIN modules.componente_curricular ON (((componente_curricular.id = escola_serie_disciplina.ref_cod_disciplina) AND
                                        ((SELECT count(cct.componente_curricular_id) AS count
-                                         FROM componente_curricular_turma cct
+                                         FROM modules.componente_curricular_turma cct
                                          WHERE (cct.turma_id = turma.cod_turma)) = 0))))
-       JOIN area_conhecimento ON ((area_conhecimento.id = componente_curricular.area_conhecimento_id)))
+       JOIN modules.area_conhecimento ON ((area_conhecimento.id = componente_curricular.area_conhecimento_id)))
    ORDER BY area_conhecimento.ordenamento_ac, area_conhecimento.nome, componente_curricular.ordenamento,
             componente_curricular.nome)
   UNION ALL
@@ -35,10 +35,10 @@ create view relatorio.view_componente_curricular as
           componente_curricular_turma.etapas_especificas,
           componente_curricular_turma.etapas_utilizadas,
           componente_curricular_turma.carga_horaria
-   FROM ((componente_curricular_turma
-       JOIN componente_curricular ON ((componente_curricular.id =
+   FROM ((modules.componente_curricular_turma
+       JOIN modules.componente_curricular ON ((componente_curricular.id =
                                        componente_curricular_turma.componente_curricular_id)))
-       JOIN area_conhecimento ON ((area_conhecimento.id = componente_curricular.area_conhecimento_id)))
+       JOIN modules.area_conhecimento ON ((area_conhecimento.id = componente_curricular.area_conhecimento_id)))
    ORDER BY area_conhecimento.ordenamento_ac, area_conhecimento.nome, componente_curricular.ordenamento,
             componente_curricular.nome);
 
@@ -46,4 +46,4 @@ alter table relatorio.view_componente_curricular owner to ieducar;
 
 alter table pmieducar.servidor_funcao add column matricula varchar;
 create sequence pmieducar.servidor_funcao_seq;
-alter table pmieducar.servidor_funcao add cod_servidor_funcao integer default nextval('servidor_funcao_seq'::regclass) not null;
+alter table pmieducar.servidor_funcao add cod_servidor_funcao integer default nextval('pmieducar.servidor_funcao_seq'::regclass) not null;

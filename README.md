@@ -11,12 +11,27 @@ Caso você não tenha utilizado o i-Educar na versão anterior e/ou não necessi
 Após ter instalado o i-Educar conforme recomendado no [README](https://github.com/portabilis/i-educar) do projeto:
 
 1 - Restaurar a base que deseja migrar no ieducarql (o mesmo utilizado pelo i-Educar)
+
 2 - Alterar arquivos de configuração phinx e ieducar.ini para utilizar a sua base
+
 3 - Rodar as migrações da pasta scripts desse repositório (deve respeitar a ordem)
-4 - Rodar as migrações do phinx
+
+4 - Rodar as migrações do phinx (nesta pasta)
 
 ```
-php ieducar/vendor/bin/phinx migrate -e development
+php phinx/vendor/bin/phinx migrate -e development
+```
+
+5 - Instalar pacote de relatórios (na pasta do i-Educar)
+
+```
+sudo docker-compose exec php artisan reports:install
+```
+
+6 - Rodar novas migrações do i-Educar (na pasta do i-Educar)
+
+```
+sudo docker-compose exec php artisan migrate
 ```
 
 ### Observações (leia antes de migrar)
