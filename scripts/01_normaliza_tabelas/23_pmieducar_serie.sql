@@ -20,3 +20,5 @@ alter table pmieducar.serie
 
 create index idx_serie_cod_regra_avaliacao_id
 	on pmieducar.serie (cod_serie, regra_avaliacao_id);
+
+alter table pmieducar.serie alter column intervalo drop not null;
