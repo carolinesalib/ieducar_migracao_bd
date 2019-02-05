@@ -2,7 +2,7 @@ create table pmieducar.disciplina_dependencia
 (
   ref_cod_matricula          integer not null
     constraint disciplina_dependencia_ref_cod_matricula_fkey
-      references matricula
+      references pmieducar.matricula
       on update restrict on delete restrict,
   ref_cod_disciplina         integer not null,
   ref_cod_escola             integer not null,
@@ -12,7 +12,7 @@ create table pmieducar.disciplina_dependencia
     constraint cod_disciplina_dependencia_pkey
       primary key,
   constraint disciplina_dependencia_ref_cod_serie_fkey
-    foreign key (ref_cod_serie, ref_cod_escola, ref_cod_disciplina) references escola_serie_disciplina
+    foreign key (ref_cod_serie, ref_cod_escola, ref_cod_disciplina) references pmieducar.escola_serie_disciplina
       on update restrict on delete restrict
 );
 

@@ -13,7 +13,7 @@ create table pmieducar.instituicao_documentacao
       primary key,
   instituicao_id   integer                                                                     not null
     constraint instituicao_id_fkey
-      references instituicao
+      references pmieducar.instituicao
       on update restrict on delete restrict,
   titulo_documento varchar(100)                                                                not null,
   url_documento    varchar(255)                                                                not null,

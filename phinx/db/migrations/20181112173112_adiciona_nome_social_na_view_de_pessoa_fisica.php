@@ -7,7 +7,7 @@ class AdicionaNomeSocialNaViewDePessoaFisica extends AbstractMigration
     public function change()
     {
         $this->execute("DROP VIEW diario.v_mensagens;");
-        $this->execute("DROP VIEW professor.matricula");
+        // $this->execute("DROP VIEW professor.matricula");
 
         $this->execute("DROP VIEW cadastro.v_pessoa_fisica;");
         $this->execute("
