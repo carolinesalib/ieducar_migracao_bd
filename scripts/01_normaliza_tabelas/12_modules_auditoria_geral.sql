@@ -7,9 +7,6 @@ create table modules.auditoria_geral
   valor_novo   json,
   data_hora    timestamp,
   codigo       varchar,
-  id           serial not null
-    constraint auditoria_geral_pkey
-      primary key,
   query        text
 );
 
